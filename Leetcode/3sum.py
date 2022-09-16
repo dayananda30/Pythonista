@@ -10,7 +10,9 @@ def threeSum(nums: List[int]) -> List[List[int]]:
             k = j + 1
             if ((nums[i] + nums[j] + nums[k]) == 0) and (i not in visted_index) and (j not in visted_index) and (
                     k not in visted_index):
-                visted_index.append([i, j, k])
+                visted_index.append(i)
+                visted_index.append(j)
+                visted_index.append(k)
                 tmp = [nums[i], nums[j], nums[k]]
                 output.append(tmp)
             j = j + 1
@@ -19,4 +21,4 @@ def threeSum(nums: List[int]) -> List[List[int]]:
     return output
 
 
-threeSum([-2, 0, 0, 0, 1, 1])
+threeSum([0,0,0,0])
