@@ -1,0 +1,22 @@
+Cloning in Github:
+git clone https://github.com/organisation/project.git
+
+Cloning Bitbucket Project:
+git clone https://yourusername@bitbucket.org/organisation/project.git
+
+
+https clone is very simple as it asks for username and password
+
+for ssh clone
+1. We need to generate the keys
+2. put public key in github profile
+
+ssh-keygen -t rsa -C "password"
+
+git clone git@github.com:organssation/project.git
+
+
+
+
+
+

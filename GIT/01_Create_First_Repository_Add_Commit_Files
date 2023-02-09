@@ -1,0 +1,15 @@
+Goto directory where you want to create repository and hit
+git init
+
+Add files for staging
+git add .
+or
+git add <filename>
+
+git commit -m "Commit Message"
+
+Adding a remote
+1. A remote name , for example origin
+2. A remote URL
+
+git remote add origin https://<github.com>/<organisation>/<repository.git>

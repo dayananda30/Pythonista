@@ -1,0 +1,25 @@
+Before you generate ssh key, you can check if there are any existing keys
+
+ls -al ~/.ssh
+
+By default the filenames of the public keys are one of the following
+id_dsa.pub
+id_ecdsa.pub
+id_ed25519.pub
+id_rsa.pub
+
+we can copy the content of id_*.pub to github or bitbucket
+
+if keys are not listing in above directory then use ssh-keygen
+
+ssh-keygen -t rsa -c "dayananda30@gmail.com"
+
+Ensure your ssh-key is added to the ssh-agent. Start the ssh-agent in the background if it's not running already.
+$eval "$(ssh-agent -s)"
+
+ssh key-add private-key
+
+If you want to chnage the upstream of an existing project from HTTPS to SSH , run below command
+git remote set-url origin ssh://git@bitbucket.server.com:<port>/organisation/project.git
+
+ssh -T git@github.com # will add github.com to known hosts

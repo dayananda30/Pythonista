@@ -1,0 +1,34 @@
+https://www.youtube.com/watch?v=deEYHVpE1c8&t=335s
+
+Assume you'va have a opensource project called - Pythonista (Where you don't have direct push access)
+
+you can clone Pythonista using either clone or fetch command.
+
+Goto Pythonista github project and click on fork
+
+Assume it is forked to daya/learn_python
+
+Problem is:
+===========
+Once you're cloned the repo, there are no upstream set for cloned repo(daya/learn_python)
+hence your cloned copy is not sync with Pythonista repo and missing out lot of commits.
+
+To Address above issue:
+=======================
+
+set upstream in the cloned repo.
+
+git remote -v # To view all the remotes
+by default , you won't see upstream for forked repos.
+
+Add upstream by
+git remote add upstream <pythonista_git_url>
+
+#fetch all the latest code using fetch
+git fetch upstream # upstream is just lika a alias to Pythonista project
+
+Merge upstream branch to local branch:
+======================================
+Assume you're on 'feature-1' branch on local
+
+git merge upstream/feature-1 feature-1

@@ -1,0 +1,38 @@
+Source : https://www.youtube.com/watch?v=7Log2jJtQqg
+         https://smallstep.com/blog/ssh-agent-explained/
+
+Problem Statement:
+------------------
+I have two machines - local setup and jumpbox(where everyone has access for jumpbox)
+I have created public and private key pair and addded public key content to github profile.
+added private key to ssh-agent and able to clone using ssh.
+
+ssh-keygen -t ecdsa -C dayananda30@gmail.com
+cat id_rsa and copy content to github profile
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_rsa
+ssh-add -l #list
+
+
+what if I want to clone in Jumpbox?
+I cannot copy paste my public and private keys inside kumpbox as it is shared by people.
+
+one way we can achieve this by agent forwarding:
+ssh -A jumpbox
+-A passes keys over the session
+you can clone the repo because -A supplies local keys to Jumpbox
+ssh-add -l should list key
+
+Otherway - ~/.ssh/config
+-------------------------
+Host Jumpbox
+    Hostname 192.x.x.x.
+    user dayananda30
+
+Host Jumpbox-with-keys
+    Hostname 192.x.x.x
+    user dayananda
+    ForwardAgent: Yes
+
+
+
