@@ -1,0 +1,19 @@
+You can find the commit you want to jumpback using git log
+To temporarily jump back to that commit , detach your head with
+#git checkout 786cfg4
+
+If you want to make any chnages on top of this commit then
+you can use -b while checking out the commit and add your changes
+on top of it and push it to a branch
+
+#git checkout -b branch-1 7678fbh
+
+To rollback to a previous commit while keeping the changes
+#git reset --soft 678ghfd
+
+To rollback to last commit
+#git reset --soft HEAD~
+
+To permanently discard any changes after a specific commit
+git reset --hard 5245fddf
+

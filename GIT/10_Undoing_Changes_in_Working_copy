@@ -1,0 +1,12 @@
+undo changes for a file in a working directory
+#git checkout -- file.txt
+
+undo chnages for entire repo
+#git checkout -- .
+
+To only undo to the parts of the repo
+#git checkout --patch -- dir
+
+To undo last two commit
+#git reset HEAD~2
+

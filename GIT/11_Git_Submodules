@@ -1,0 +1,16 @@
+Cloning a git repository with submodules
+#git clone --recursive https://github.com/dayananda30/Pythonista.git
+
+Getting latest from submodule
+#git submodule update --recursive
+
+Adding submodule
+#git submodule add https://github.com/dayananda30/sub-module.git
+
+#git submodule --remote --recursive
+
+Removing a submodule
+#git submodule denit the_submodule
+#git rm the_submodule
+
+

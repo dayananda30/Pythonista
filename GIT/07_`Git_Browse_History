@@ -1,0 +1,14 @@
+git log # command displays all the commits
+
+git log -2 # get only last two recently committed commits.
+
+git log --decorate --oneline --graph #graph format
+
+Filter_Logs
+------------
+
+git log --after '3 days ago'
+git log -after 2023-02-15
+git log --author=dayananda30
+
+

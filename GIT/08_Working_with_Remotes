@@ -1,0 +1,9 @@
+Deleting a Remote branch
+git push [remote-name] --delete [branch name]
+
+Check existing remotes
+git remote -v
+
+Changing git Remote URL
+got remote set-url origin https://github.com/dayananda30.git
+

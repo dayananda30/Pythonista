@@ -1,0 +1,6 @@
+To alloe empty commits
+#git commit -m "Allow Empty Commits" --allow-empty
+
+Commiting on behalf of someone
+#git commit -m "Commiting on behalf of some one" --author "Dayananda D R <dayananda30@gmail.com>"
+
