@@ -1,3 +1,18 @@
+"""
+Time Complexity: O(nlogn)
+Pros:   Large size List
+        Linked List
+        External Sorting - Need not to load all data of two external disk to sort.
+        Stable - The order of the duplicates are maintained
+
+Cons:   Extra space (not in place sorting)
+        No small problem - It is slower for smaller problems, wastes lot of time in recursion.
+        Insertion Sort for smaller problem since it is suitable for linked list.
+
+
+"""
+
+
 def mergesort(array):
     if len(array) > 1:
         left_array = array[:len(array) // 2]
