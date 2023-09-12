@@ -1,0 +1,19 @@
+What are docker repository keys?
+--------------------------------
+In the context of Docker, repository keys (also known as Docker registry keys or Docker repository signing keys) are
+cryptographic keys used for verifying the authenticity and integrity of Docker images and repositories.
+
+These keys play a crucial role in ensuring that the Docker images you pull or push are from trusted sources and have not been tampered with.
+
+Docker repositories can be signed with OpenPGP keys, specifically with GPG (GNU Privacy Guard) keys. When a Docker image is signed,
+it means that it has been cryptographically associated with a specific key.
+By verifying the signature of a Docker image using the corresponding repository key, you can be reasonably confident that the image has not been modified or replaced since it was signed.
+
+Repository keys are usually provided by the maintainers or publishers of Docker images or repositories.
+Docker clients, such as the Docker engine or Docker command-line interface, have built-in functionality to verify signatures using repository keys.
+
+To verify a Docker image's signature, Docker clients use the repository key associated with the image's repository.
+If the key is not present on the local system, the client may need to fetch the key from a trusted key server or other sources specified by the repository.
+
+By verifying Docker image signatures with repository keys, users can have greater assurance about the authenticity and
+integrity of the images they use, helping to protect against potential security risks or compromised images.

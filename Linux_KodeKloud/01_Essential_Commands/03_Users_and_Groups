@@ -1,0 +1,23 @@
+# You can find out user and group name that the file belongs to
+$ls -ltr
+
+# Change Group from family to jointfamily for picture.jpeg file
+chgrp jointfamily picture.jpeg
+
+# To List all the groups
+$groups
+
+
+# To Change the ownership of the file
+$ chown nanda picture.jpeg
+
+# Changing both user and the group
+$chown nanda:jointfamily picture.jpeg
+
+
+
+
+
+
+
+

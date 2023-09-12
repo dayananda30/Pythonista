@@ -1,0 +1,40 @@
+The Format of the permission is -rwxrwxrwx
+
+The first bit tells you the type
+    - for regular file
+    d for directory
+    l link
+
+
+    Add Permissions to user or owner:
+    ======================================
+                Option      Examples
+        user     u+         u+w/u+rw/u+rwx
+        group    g+         g+w/g+rw/g+rwx
+        others   o+         o+w/o+rw/o+rwx
+
+
+
+    Remove Permissions to user or owner (-)
+    =======================================
+                Option      Examples
+        user     u-         u-w/u-rw/u-rwx
+        group    g-         g-w/g-rw/g-rwx
+        others   o-         o-w/o-rw/o-rwx
+
+
+    Setting up Exact Permission (=)
+    ======================================
+                Option      Examples
+        user     u=         u=w/u=rw/u=rwx
+        group    g-         g=w/g=rw/g=rwx
+        others   o-         o=w/o=rw/o=rwx
+
+    All in one:
+    ===========
+    $chmod u+rw,g=r,o= pictures.jpeg
+
+
+
+
+

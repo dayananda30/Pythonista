@@ -1,0 +1,36 @@
+Assume we have a voter application with following components
+    - voting app - python
+    - In Memory database - redis
+    - worker - . NET
+    - postgress SQL
+    - result app - Node JS
+
+    - We can run each of the images separately but dependent containers are not linked. ex: voting app and redis db.
+    - we can link two containers using --link parameter like below
+        - docker run -d --name=redis redis
+        - docker run -d --name vote -p 5000:80 --link redis:redis voting-app
+
+    Note: links will be deprecated in future from docker.
+
+Docker Compose:
+    redis: ==> Name of the Container
+        image: redis  ==> Image to be used
+    db:
+        image: postgress:9.4
+    vote:
+        image: voting-app
+        ports:
+            - 5000:80 ==> ports to be mapped
+        links: ==> mention the dependent service
+            - redis:
+
+docker-compose up to bring entire application stack.
+
+If I want build locally instead of pulling the images then i need to replace image with build like below
+    worker:
+        build: ./workerDockerfile
+        ports:
+            - 6000:90
+
+
+

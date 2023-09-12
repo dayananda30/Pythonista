@@ -1,0 +1,17 @@
+# creates container with random container name.
+docker run nginx:latest
+
+# Create a container with detached mode
+docker run -d nginx:latest
+
+# Create a container with useful name
+docker run --name frontend -d nginx:latest
+
+# Exposing port of host 3000 to container port 80
+docker run --name frontend --port 3000:80 nginx:latest
+
+# stop container
+docker stop < container name| container ID>
+
+# removing container in bulk
+docker rm $(docker ps -aq)

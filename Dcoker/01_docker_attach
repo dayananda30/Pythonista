@@ -1,0 +1,18 @@
+Docker Attach:
+
+Attach terminal's standard input/output/error streams to a running container
+
+Usage:
+    docker attach [ options ] container
+
+
+docker run -d --name demo ubuntu:20.04 /usr/bin/top -b
+    docker attach demo
+
+
+Some of the docker build options:
+    --build-arg
+    --pull always pull the newer veriosn of the base image
+    --quiet suppress build output
+
+

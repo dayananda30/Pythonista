@@ -1,0 +1,50 @@
+version1:
+=========
+
+The limitation of version 1 is - there is no way to tell docker that worker container is dependent on database container
+    redis:
+        image: redis
+    db:
+        image: postgress:9.4
+    vote:
+        image: voting-app
+        ports:
+            - 5000:80 =
+        links:
+            - redis:
+
+
+version2:
+=========
+dependency can be mentioned as depends_on keyword but can't specify custom networks
+
+version: 2
+    services:
+        redis:
+            image: redis
+        db:
+            image: postgress:9.4
+        vote:
+            image: voting-app
+            ports:
+                - 5000:80 =
+            depends_on:
+                - redis:
+
+version3:
+=========
+supports docker swarm
+
+version: 3
+    services:
+        redis:
+            image: redis
+        db:
+            image: postgress:9.4
+        vote:
+            image: voting-app
+            ports:
+                - 5000:80 =
+            depends_on:
+                - redis:
+

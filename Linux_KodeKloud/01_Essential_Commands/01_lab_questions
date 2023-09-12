@@ -1,0 +1,16 @@
+1. Command you can change the static hostname of your Linux System:
+
+[bob@centos-host ~]$ hostnamectl
+   Static hostname: centos-host
+         Icon name: computer-container
+           Chassis: container
+        Machine ID: 959f802d50f145f3a6ae26318ab619a1
+           Boot ID: 89d7b2cebb474d15a37349404cda66c5
+    Virtualization: container-other
+  Operating System: CentOS Stream 8
+       CPE OS Name: cpe:/o:centos:centos:8
+            Kernel: Linux 5.4.0-1104-gcp
+      Architecture: x86-64
+
+
+2.

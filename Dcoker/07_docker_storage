@@ -1,0 +1,20 @@
+Docker Storage:
+    Docker stores information under
+        - /var/lib/docker
+            - aufs
+            - containers
+            - images
+            - volumes
+
+
+Persistent Volumes: (Volume Mount)
+    - docker volume create data_volumes
+    - Above command creates data_volume folder under /var/lib/docker/volumes
+        - /var/lib/docker/volumes
+            - data_volumes
+    - you can use the volume inside the container by mounting the volume
+    - docker run -v data_volumes:/var/lib/mysql <container_name>
+
+External Storage: (Bind Mount)
+    - docker run -v /data/mysql:/var/lib/mysql <container_name>
+

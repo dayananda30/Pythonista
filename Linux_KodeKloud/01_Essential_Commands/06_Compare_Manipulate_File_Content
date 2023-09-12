@@ -1,0 +1,6 @@
+Get unique from a file
+$sort file.txt | uniq
+
+
+
+

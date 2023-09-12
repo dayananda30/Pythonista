@@ -1,0 +1,17 @@
+Syntax:
+    find [path] [ search parameter ]
+
+
+Note - No path means it take current directory
+
+find all jpeg files
+find /usr/share -name '*.jpg'
+
+find files more than 10MB
+find /tmp/ -size +10M
+
+find files changed less than a minute
+find /root/ -mmin -1
+
+
+

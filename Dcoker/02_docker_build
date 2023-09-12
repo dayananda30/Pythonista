@@ -1,0 +1,35 @@
+Docker build
+
+Build an image from a Dockerfile
+
+Usage:
+    docker build [ OPTIONS ] PATH | URL
+
+
+Build with Path:
+    docker build .
+
+Explanation:
+    Above example says that PATH is current directory and all the files in that directory get tar ed and
+    sent it to docker daemon.
+
+Build with URL:
+    docker build https://github.com/dayananda30/Crack-Interviews.git
+
+Above example , clone the repo and look for Dockerfile at the root of the cloned repository.
+
+
+.dockerignore file:
+    When running docker build -f frontend.Dockerfile . will always look for frontend.Dockerfile.dockerignore.
+    if such file is not presnt then it look for .dockerignore
+
+Tagging an image
+    docker build -t frontend:v.0.1 .
+    docker build -t frontend:v.0.1 frontend:latest .
+
+Build Time variables (--build-arg) :
+    docker build --build-arg USER=dayananda --build-arg REGION=non-prod .
+
+
+
+

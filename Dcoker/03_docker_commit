@@ -1,0 +1,12 @@
+Docker Commit:
+
+Create a new image from a container's changes
+
+Usage:
+
+docker commit [ OPTIONS ] CONTAINER [ REPOSITORY : TAG ]
+
+Note: The commit operation will not include any data container in volumes mounted inside the container.
+
+
+docker commit dfshb343sd76 frontend:latest

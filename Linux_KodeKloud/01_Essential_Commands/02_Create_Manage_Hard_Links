@@ -1,0 +1,33 @@
+inode:
+    - stores metadata about file information.
+    - where block of data is stored for a particular file content.
+    - df -ih will give you the inode information.
+
+Assume you have photo.jpeg file created under /home/dayananda/pictures/photo.jpeg
+
+stat  /home/dayananda/pictures/photo.jpeg will give you the inode information and hardlink point to 1
+
+Example:
+[bob@centos-host ~]$ stat /tmp/hlink
+  File: /tmp/hlink
+  Size: 0               Blocks: 0          IO Block: 4096   regular empty file
+Device: d000fch/13631740d       Inode: 37675187    Links: 1
+Access: (0644/-rw-r--r--)  Uid: ( 1000/     bob)   Gid: ( 1000/     bob)
+Access: 2023-05-08 04:59:44.665588561 +0000
+Modify: 2023-05-08 04:59:44.665588561 +0000
+Change: 2023-05-08 04:59:44.669588936 +0000
+ Birth: 2023-05-08 04:59:44.665588561 +0000
+
+create a hardlink
+
+ln /home/dayananda/pictures/photo.jpeg /home/user1/pictures/daya_photo.jpeg
+
+stat  /home/dayananda/pictures/photo.jpeg
+
+will show link as 2
+
+
+Limitations:
+    Only hardlink to files not folders
+    cannot hardlink mounted files
+

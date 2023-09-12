@@ -1,0 +1,20 @@
+Docker Networking:
+
+    - When a docker is created, it creates a default network called bridge network.
+    - which is internal private IP addresses , usually starts with 172.17 subnet range.
+    - You can map container ports to host ports for exposing these containers to external world.
+
+Bridge Network:
+    - By default, Docker creates only one network.
+    - We can create our custom network using docker network command.
+    - docker network create --driver bridge --subnet 182.18.0.0/16 custom-network
+    - docker network ls
+    - docker inspect <container name> to view IP address.
+
+Embedded DNS:
+    - Docker has build in DNS server running on 127.0.0.11
+
+
+
+
+

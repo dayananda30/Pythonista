@@ -1,0 +1,18 @@
+why user should be added to docker group?
+-----------------------------------------
+Adding a user to the Docker group on a Linux system allows that user to run Docker commands without needing to prefix them with sudo.
+By default, Docker requires root or sudo privileges to execute commands because it interacts with system resources that are typically restricted to administrators.
+Adding a user to the Docker group grants them the necessary permissions to manage Docker containers, images, and other resources.
+This can be convenient for developers or administrators who frequently work with Docker and want to avoid typing sudo before every Docker command.
+
+However, it's important to note that granting a user membership in the Docker group effectively gives them root-level access to the Docker daemon.
+This means they can potentially manipulate Docker resources and containers, which could be a security risk.
+Therefore, it's generally recommended to add trusted users to the Docker group who require regular Docker access.
+
+It's important to exercise caution when granting permissions and consider the potential security implications of adding users to the Docker group.
+
+
+
+
+
+R

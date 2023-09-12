@@ -1,0 +1,9 @@
+Docker Volumes:
+
+Sharing Volumes between host and containers
+docker run  --name mycontainer -p 8000:80 -v /dayananda/content.html:/usr/local/share/content.html:ro nginx:latest
+
+
+Sharing Volumes between containers
+docker run --name website-copy -d -p 5001:80 --volumes-from mycontainer nginx:latest
+
